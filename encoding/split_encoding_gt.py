@@ -45,7 +45,7 @@ class Events(object):
         t_index = 0
         U_gt_all = np.array(gt_temp[:, 0, :, :])
         V_gt_all = np.array(gt_temp[:, 1, :, :])
-        for i in range(split_interval-(dt_time_temp-1)):
+        for i in range(split_interval-dt_time_temp-2):
             
             U_gt, V_gt = estimate_corresponding_gt_flow(U_gt_all, V_gt_all, 
                                                         gt_ts_temp, 
